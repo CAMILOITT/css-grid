@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	display: grid;
+	grid-template-areas: 'header menu menu menu''hero hero hero hero''main main nada image''main main nada extra''banner banner banner banner';
+}
+
+.item1 {
+	grid-area: header;
+}
+
+.item2 {
+	grid-area: menu;
+}
+
+.item3 {
+	grid-area: hero;
+  height: 500px;
+}
+ /*! hiso flecha 
+ yo creo que es otro cosa
+ */
+.item4 {
+	grid-area: main;
+}
+
+.item5 {
+  grid-area: image;
+height: 200px;
+/* ahi genera un tab de dos espacios */
+}
+
+.item6 {
+	grid-area: extra;
+	height: 200px;
+}
+
+.item7 {
+	grid-area: banner;
+	height: 100px;
+}
+
+@media screen and (max-width: 769px) {
+	.container {
+		grid-template-areas: 'header header header header header''hero hero hero hero hero''menu main main main main''menu banner banner  banner banner''menu extra extra extra image';
+	}
+
+	.item4 {
+		height: 300px;
+	}
+
+	.item5 {
+		grid-area: image;
+		height: 100px;
+	}
+
+	.item6 {
+		grid-area: extra;
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.container {
+		grid-template-areas: 'header''menu ''hero ''main ''banner''extra''image';
+	}
+}
